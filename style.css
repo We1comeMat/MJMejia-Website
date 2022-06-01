@@ -25,6 +25,10 @@
     width: 75px;
     cursor: pointer;
 }
+nav{
+    flex: 1;
+    text-align: right;
+}
 nav ul li{
     list-style: none;
     margin: inline-block;
