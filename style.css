@@ -11,8 +11,9 @@
     margin: auto;
 }
 .logo img{
-    width: 450px;
+    width: 440px;
     height: auto;
+    padding-left: 60px;
 }
 .navbar{
     position: fixed;
