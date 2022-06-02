@@ -21,10 +21,6 @@
     cursor: pointer;
     margin: 30px 0;
 }
-.menu-icon{
-    width: 60px;
-    cursor: pointer;
-}
 nav{
     flex: 1;
     text-align: right;
@@ -40,7 +36,7 @@ nav ul li a{
     font-size: 25px;
 }
 nav ul li a:hover{
-    color: #7f8c8d;
+    color: rgb(163, 163, 163);
 }
 section img
 {
