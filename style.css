@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Ubuntu:wght@400;500;700&display=swap&family=Poppins:wght@300;400;500;600');
 *{
     margin: 0;
     padding: 0;
@@ -11,16 +11,16 @@
     margin: auto;
 }
 .logo img{
-    width: 440px;
+    width: 125px;
     height: auto;
-    padding-left: 60px;
+    padding-left: 0px;
 }
 .navbar{
     position: fixed;
     width: 100%;
     padding: 15px 0;
     /* background: rgb(61, 61, 61); */
-    font-family: 'Lato';
+    font-family: 'Poppins';
 }
 .navbar .max-width{
     display: flex;
@@ -49,8 +49,8 @@
     height: 100vh;
     color: white;
     min-height: 500px;
-    font-family: 'Ubuntu';
-    font-weight: 500;
+    font-family: 'Poppins';
+    font-weight: 600;
 }
 .home .max-width{
     margin: auto 0 auto 40px;
@@ -58,11 +58,12 @@
 .home .max-width .text-1{
     font-size: 140px;
     letter-spacing: 10px;
-    margin-top: -300px;
-    margin-left: 60px;
+    margin-top: -250px;
+    margin-left: 80px;
 }
 .home .max-width .text-2{
     font-size: 140px;
     letter-spacing: 15px;
-    margin-left: 60px;
+    margin-left: 80px;
+    margin-top: -50px;
 }
