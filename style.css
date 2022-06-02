@@ -19,7 +19,6 @@
     position: fixed;
     width: 100%;
     padding: 15px 0;
-    /* background: rgb(61, 61, 61); */
     font-family: 'Poppins';
 }
 .navbar .max-width{
@@ -35,20 +34,19 @@
     color: white;
     font-size: 30px;
     font-weight: 400;
+    letter-spacing: 3px;
     margin-left: 25px;
     padding-right: 20px;
     transition: color 0.3s ease;
 }
-.navbar .menu li a:hover{
-    color: rgb(189, 189, 189);
-}
 
 .home{
     display: flex;
-    background: url("images/bg.JPG") no-repeat center center fixed;
-    height: 100vh;
+    background-image: url("images/bg.JPG");
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
     color: white;
-    min-height: 500px;
     font-family: 'Poppins';
     font-weight: 600;
 }
@@ -65,5 +63,5 @@
     font-size: 140px;
     letter-spacing: 15px;
     margin-left: 80px;
-    margin-top: -50px;
+    margin-top: -80px;
 }
