@@ -17,7 +17,7 @@
     animation-name: spin;
     animation-duration: 400ms;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
 .navbar{
     position: fixed;
@@ -61,9 +61,13 @@
 }
 #text-1{
     font-size: 150px;
-}
-#text-2{
-    font-size: 150px;
+    padding-top: 400px;
+    padding-left: 150px;
+    line-height: 140px;
+    letter-spacing: 10px;
+    text-shadow: 4px 3px 15px rgba(0, 0, 0, 0.9);
+    animation: fadeIn 3s ease;
+    animation: scale .5s ease;
 }
 
 
@@ -73,6 +77,16 @@
     }
     100% {
         opacity: 1;
+    }
+}
+@keyframes scale{
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
