@@ -5,6 +5,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+.disable-select{
+    user-select:none;
+  }
 .max-width{
     max-width: 7500px;
     padding: 20px 80px;
@@ -21,6 +24,7 @@
 }
 .navbar{
     position: fixed;
+    user-select: none;
     width: 100%;
     padding: 15px 0;
     font-family: 'Poppins';
@@ -60,10 +64,11 @@
     height: 100vh;
 }
 #text-1{
-    font-size: 150px;
+    user-select: none;
+    font-size: clamp(15px, 13vw, 200px);
     padding-top: 400px;
-    padding-left: 150px;
-    line-height: 140px;
+    padding-left: 110px;
+    line-height: clamp(10px, 12vw, 180px);
     letter-spacing: 10px;
     text-shadow: 4px 3px 15px rgba(0, 0, 0, 0.9);
     animation: scale .5s ease;
