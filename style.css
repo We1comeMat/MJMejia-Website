@@ -15,7 +15,7 @@
     height: auto;
     padding-left: 0px;
     animation-name: spin;
-    animation-duration: 4000ms;
+    animation-duration: 400ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
