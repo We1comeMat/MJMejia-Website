@@ -33,5 +33,18 @@
         <h1 id="test">TEST<br>TEST</h1>
     </section>
 
+    <script>
+        let maintext = document.getElementById('text-1');
+        window.addEventListener('scroll', function(){
+            let scrollvalue = window.scrollY;
+            let opac = 1;
+            console.log(scrollvalue)
+            if (scrollvalue <= 400) {
+                maintext.style.opacity = 1 - (scrollvalue / 400);
+            } else {
+                maintext.style.opacity = 0
+            }
+        })
+    </script>
 </body>
 </html>
