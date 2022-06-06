@@ -40,7 +40,7 @@
             let opac = 1;
             console.log(scrollvalue)
             if (scrollvalue <= 400) {
-                maintext.style.opacity = 1 - (scrollvalue / 400);
+                maintext.style.opacity = 1 - (scrollvalue / (window.outerHeight / 3));
             } else {
                 maintext.style.opacity = 0
             }
