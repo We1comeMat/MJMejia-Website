@@ -67,7 +67,7 @@
     user-select: none;
     position: fixed;
     font-size: clamp(15px, 13vw, 200px);
-    padding-top: 400px;
+    padding-top: 35vh;
     padding-left: clamp(60px, 9vw, 250px);
     line-height: clamp(10px, 12vw, 180px);
     letter-spacing: 10px;
