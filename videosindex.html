@@ -28,24 +28,8 @@
 
     <section class="home" id="home">
         <h1 id="text-1">MATT<br>MEJIA</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-g0pdNyQfj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
-    <section class="about" id="about">
-        <h1 id="test">PART<br>TWO</h1>
-    </section>
-
-    <script>
-        let maintext = document.getElementById('text-1');
-        window.addEventListener('scroll', function(){
-            let scrollvalue = window.scrollY;
-            let opac = 1;
-            console.log(scrollvalue)
-            if (scrollvalue <= 400) {
-                maintext.style.opacity = 1 - (scrollvalue / (window.outerHeight / 3.5));
-            } else {
-                maintext.style.opacity = 0
-            }
-        })
-    </script>
 </body>
 </html>
