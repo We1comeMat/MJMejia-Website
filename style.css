@@ -150,9 +150,11 @@ header #toggle:after{
     display: flex;
     flex-direction: row;
     bottom: 100px;
+    
 }
 .pnglinks li{
     list-style: none;
+    margin-right: 15px;
 }
 .pnglinks li a{
     position: relative;
@@ -161,7 +163,7 @@ header #toggle:after{
     width: 100px;
     height: 100px;
     text-decoration: none;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 10px;
     margin: 10px 0 0;
 }
