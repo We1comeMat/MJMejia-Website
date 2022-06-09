@@ -1,51 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matt Mejia | Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-</head>
-
-<body>
-    <div class="navbar">
-        <div class="max-width">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/whitelogosmall.png" class="logo">
-                </a>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta charset="UTF-8">
+        <title>Matt Mejia | Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="banner" id="sec">
+            <header>
+                <a href="#" class="logo">MM</a>
+                <div id="toggle" onclick="toggle()"></div>
+            </header>
+            <div class="content">
+                <h2>MATT<br>MEJIA</h2>
+                <p>I am a student at Grand Canyon University studying electrical engineering. Blah Blah Blah.</p>
+                <a href="#">MY WORK</a>
             </div>
-            <ul class="menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="videosindex.html">VIDEOS</a></li>
+            <ul class="pnglinks">
+                <li><a href="https://www.linkedin.com/in/matthewmejia/" target="_blank"><img src="images/linkedin.png"></a></li>
+            </ul>
+        </section>
+        <div id="navigation">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PROJECTS</a></li>
                 <li><a href="https://www.linkedin.com/in/matthewmejia/" target="_blank">LINKEDIN</a></li>
             </ul>
         </div>
-    </div>
-
-    <section class="home" id="home">
-        <h1 id="text-1">MATT<br>MEJIA</h1>
-    </section>
-
-    <section class="about" id="about">
-        <h1 id="test">PART<br>TWO</h1>
-    </section>
-
-    <script>
-        let maintext = document.getElementById('text-1');
-        window.addEventListener('scroll', function(){
-            let scrollvalue = window.scrollY;
-            let opac = 1;
-            console.log(scrollvalue)
-            if (scrollvalue <= 400) {
-                maintext.style.opacity = 1 - (scrollvalue / (window.outerHeight / 3.5));
-            } else {
-                maintext.style.opacity = 0
+        <script type="text/javascript">
+            function toggle(){
+                var sec = document.getElementById('sec');
+                var nav = document.getElementById('navigation');
+                sec.classList.toggle('active');
+                nav.classList.toggle('active');
             }
-        })
-    </script>
-</body>
+        </script>
+    </body>
 </html>
