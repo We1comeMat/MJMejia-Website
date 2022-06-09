@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta charset="UTF-8">
+        <title>Matt Mejia | Portfolio</title>
+        <link rel="stylesheet" href="videostyle.css">
+    </head>
+    <body>
+        <section class="banner" id="sec">
+
+            <div class="container">
+                
+                <div class="side-bar">
+
+                    <ul class="list">
+                        <li class="active" data-src="videos/stacy.mp4">STACY'S MOM</li>
+                        <li data-src="videos/hic.mp4">HI-C</li>
+                        <li data-src="videos/stacy.mp4">REPORT CARD</li>
+                        <li data-src="videos/stacy.mp4">NATURE TIME</li>
+                        <li data-src="videos/stacy.mp4">KIDZ BOP 100</li>
+                    </ul>
+
+                </div>
+
+                <div class="video-container">
+                    <video src="videos/stacy.mp4" autoplay controls></video>
+                </div>
+            </div>
+
+            <header>
+                <a href="#" class="logo">MM</a>
+                <div id="toggle" onclick="toggle()"></div>
+            </header>
+        </section>
+        <div id="navigation">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="videoindex.html">VIDEOS</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="https://www.linkedin.com/in/matthewmejia/" target="_blank">LINKEDIN</a></li>
+            </ul>
+        </div>
+
+        <script type="text/javascript">
+            function toggle(){
+                var sec = document.getElementById('sec');
+                var nav = document.getElementById('navigation');
+                sec.classList.toggle('active');
+                nav.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>

@@ -149,7 +149,8 @@ header #toggle:after{
     position: absolute;
     display: flex;
     flex-direction: row;
-    bottom: 100px;
+    bottom: 9vh;
+    padding-left: 10vw;
     
 }
 .pnglinks li{
@@ -160,8 +161,8 @@ header #toggle:after{
     position: relative;
     display: grid;
     place-items: center;
-    width: 100px;
-    height: 100px;
+    width: 9vh;
+    height: 9vh;
     text-decoration: none;
     border: 2px solid white;
     border-radius: 10px;
@@ -171,7 +172,7 @@ header #toggle:after{
     background: white;
 }
 .pnglinks li a img{
-    max-width: 80px;
+    max-width: 7vh;
     filter: grayscale();
 
 }
