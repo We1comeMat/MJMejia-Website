@@ -19,13 +19,16 @@ header{
 }
 header .logo{
     position: relative;
-    font-weight: 800;
+    font-weight: 600;
     color: white;
     text-decoration: none;
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 0 10px;
 }
 header #toggle{
     position: relative;
@@ -66,6 +69,7 @@ header #toggle:after{
     padding: 100px;
     background: url(images/bg.JPG);
     background-size: cover;
+    background-position: center center;
     display: flex;
     align-items: center;
     transition: 0.5s;
@@ -80,7 +84,7 @@ header #toggle:after{
     right: -200px;
     width: 400px;
     height: 100%;
-    background: #2f3542;
+    background: #3d3d3d;
     z-index: 1;
     display: grid;
     place-items: center;
@@ -96,13 +100,13 @@ header #toggle:after{
 }
 #navigation ul li{
     list-style: none;
-
+    text-align: center;
 }
 #navigation ul li a{
     color: white;
     text-decoration: none;
     display: inline-block;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -114,12 +118,14 @@ header #toggle:after{
     color: white;
     font-size: 10em;
     line-height: 150px;
+    text-shadow: 4px 4px 10px black;
 }
 .content p{
     font-size: 1.7em;
     color: white;
     font-weight: 300;
     padding-top: 20px;
+    text-shadow: 2px 2px 6px black;
 }
 .content a{
     position: relative;
@@ -168,7 +174,8 @@ header #toggle:after{
         padding: 100px 50px 150px;
     }
     .banner h2{
-        font-size: 1.8em;
+        font-size: 6em;
+        line-height: 100px;
     }
     .banner .content p,
     .banner .content a{
@@ -181,7 +188,7 @@ header #toggle:after{
         width: 250px;
     }
     #navigation ul li a{
-        font-size: 1.5em;
+        font-size: 2em;
         margin: 5px 0;
     }
     .pnglinks{
