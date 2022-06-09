@@ -107,16 +107,19 @@ header #toggle:after{
     text-transform: uppercase;
 }
 .content{
-    max-width: 600px;
+    max-width: 650px;
+    padding-left: 10vw;
 }
 .content h2{
     color: white;
-    font-size: 2.5em;
+    font-size: 10em;
+    line-height: 150px;
 }
 .content p{
-    font-size: 1.2em;
+    font-size: 1.7em;
     color: white;
-    font-weight: 400;
+    font-weight: 300;
+    padding-top: 20px;
 }
 .content a{
     position: relative;
@@ -142,17 +145,18 @@ header #toggle:after{
     position: relative;
     display: grid;
     place-items: center;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     text-decoration: none;
     border: 1px solid white;
+    border-radius: 10px;
     margin: 10px 0 0;
 }
 .pnglinks li a:hover{
     background: white;
 }
 .pnglinks li a img{
-    max-width: 40px;
+    max-width: 80px;
     filter: grayscale();
 
 }
