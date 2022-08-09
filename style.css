@@ -7,6 +7,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
+ 
+
 header{
     position: absolute;
     top: 0;
@@ -114,13 +116,13 @@ header .logo{
 }
 
 .aboutme{
-    border-top: 1rem solid white;
+    border-top: 1.5rem solid white;
     position: relative;
     text-align: center;
     width: 100%;
     min-height: 100vh;
     padding: 100px;
-    background: url(images/projectbg.JPG);
+    background: url(images/projectbg.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
