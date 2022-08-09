@@ -7,8 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
- 
-
 header{
     position: absolute;
     top: 0;
@@ -132,17 +130,38 @@ header .logo{
 }
 .abtext h2{
     color: white;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 300;
-    line-height: 150px;
+    line-height: 80px;
+    text-shadow: 4px 4px 10px black;
+    transition: ease all .2s;
+}
+.abtext p{
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 100px;
     text-shadow: 4px 4px 10px black;
     transition: ease all .2s;
 }
 
+.card{
+    color: white;
+    background-image: url(images/enigma2.jpg);
+    background-size:contain;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+}
+.card-content{
+    padding: 1.5em;
+    background: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 @media (max-width: 767px){
-    /*header{
-        padding: 20px 30px;
-    }*/
 
     header{
         position: absolute;
