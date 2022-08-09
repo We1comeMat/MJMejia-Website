@@ -37,11 +37,11 @@ header .logo{
     background: url(images/bg.JPG);
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     z-index: 2;
 }
-
 
 .content{
     max-width: 650px;
@@ -111,6 +111,30 @@ header .logo{
     max-width: 6vh;
     filter: grayscale();
 
+}
+
+.aboutme{
+    border-top: 1rem solid white;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: url(images/projectbg.JPG);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: block;
+    align-items: center;
+    z-index: 2;
+}
+.abtext h2{
+    color: white;
+    font-size: 5em;
+    font-weight: 300;
+    line-height: 150px;
+    text-shadow: 4px 4px 10px black;
+    transition: ease all .2s;
 }
 
 @media (max-width: 767px){
