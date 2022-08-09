@@ -146,15 +146,42 @@ header .logo{
 }
 
 .card{
+    text-align: left;
     color: white;
     background-image: url(images/enigma2.jpg);
-    background-size:contain;
+    background-size: cover;
+    background-position: center;;
     padding: 10rem 0 0;
     max-width: 35ch;
 }
 .card-content{
     padding: 1.5em;
-    background: black;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0.4),
+        hsl(20 0% 0% / 0.8),
+        hsl(0 0% 0% / 1)
+    )
+}
+.card-title{
+    font-weight: 500;
+    position: relative;
+    width: max-content;
+    /*outline: 1px solid red;*/
+    line-height: 50px;
+}
+.card-title::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: white;
+}
+.card-body{
+    font-weight: 200;
+    padding-top: 10px;
+    line-height: 24px;
 }
 
 html{
