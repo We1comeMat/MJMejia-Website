@@ -46,12 +46,14 @@ header .logo{
 .content{
     max-width: 650px;
     padding-left: 10vw;
+    transition: ease all .2s;
 }
 .content h2{
     color: white;
     font-size: 10em;
     line-height: 150px;
     text-shadow: 4px 4px 10px black;
+    transition: ease all .2s;
 }
 .content p{
     font-size: 1.7em;
@@ -59,6 +61,7 @@ header .logo{
     font-weight: 300;
     padding-top: 20px;
     text-shadow: 2px 2px 6px black;
+    transition: ease all .2s;
 }
 .content a{
     position: relative;
@@ -131,14 +134,6 @@ header .logo{
         font-weight: 300;
         padding-top: 20px;
         text-shadow: 2px 2px 6px black;
-    }
-
-    #navigation{
-        width: 250px;
-    }
-    #navigation ul li a{
-        font-size: 2em;
-        margin: 5px 0;
     }
 
     .pnglinks{
