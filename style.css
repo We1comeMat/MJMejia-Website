@@ -138,6 +138,7 @@ header .logo{
         background: url(images/bg.JPG);
         background-size: cover;
         background-position: center center;
+        background-attachment: fixed;
         display: flex;
         align-items: center;
         z-index: 2;
