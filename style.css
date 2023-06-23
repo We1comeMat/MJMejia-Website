@@ -113,103 +113,34 @@ header .logo{
 
 }
 
-.aboutme{
-    border-top: 1.5rem solid white;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    background: url(images/projectbg.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    display: block;
-    align-items: center;
-    z-index: 2;
-}
-.abtext h2{
-    color: white;
-    font-size: 4em;
-    font-weight: 300;
-    line-height: 80px;
-    text-shadow: 4px 4px 10px black;
-    transition: ease all .2s;
-}
-.abtext p{
-    color: white;
-    font-size: 1.5em;
-    font-weight: 300;
-    line-height: 125px;
-    text-shadow: 4px 4px 10px black;
-    transition: ease all .2s;
-}
 
-.card{
-    text-align: left;
+.portfolio-button {
+    position: fixed;
+    top: 40px;
+    right: 5vw;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(41, 41, 41);
     color: white;
-    background-image: url(images/enigma2.jpg);
-    background-size: cover;
-    background-position: center;;
-    padding: 10rem 0 0;
-    max-width: 35ch;
-    border-radius: 0.5rem;
-    overflow: hidden;
-}
-.card-content{
-    --padding: 1.5rem;
-    padding: var(--padding);
-    background: linear-gradient(
-        hsl(0 0% 0% / 0.5),
-        hsl(20 0% 0% / 0.8),
-        hsl(0 0% 0% / 1)
-    )
-}
-.card-title{
-    font-weight: 500;
-    position: relative;
-    width: max-content;
-    /*outline: 1px solid red;*/
-    line-height: 50px;
-}
-.card-title::after{
-    content: "";
-    position: absolute;
-    height: 3px;
-    left: calc(var(--padding) * -1);
-    bottom: 0;
-    width: calc(100% + var(--padding));
-    background: white;
-}
-.card-body{
-    font-weight: 200;
-    padding-top: 10px;
-    line-height: 24px;
-    padding-bottom: 20px;
-}
-.button {
-    cursor: pointer;
-    display: inline;
     text-decoration: none;
-    color: black;
-    background-color: white;
-    padding: 0.5em 1.25em;
-    border-radius: 0.25em;
-    transition: 0.5s;
-}
-.button:hover,
-.button:focus{
-    color: white;
-    background: rgb(41, 41, 41);
-    transition: 0.5s;
-}
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-size: 22px;
+    border: 2px solid white;
+    font-weight: 300;
+  }
 
+  .portfolio-button:hover {
+    background-color: white;
+    color: rgb(41, 41, 41);
+  }
+  
 
 html{
     scroll-behavior: smooth;
 }
 
-@media (max-width: 767px){
+@media (max-width: 1000px){
 
     header{
         position: absolute;
