@@ -128,13 +128,12 @@ header .logo{
     font-size: 22px;
     border: 2px solid white;
     font-weight: 300;
-  }
-
-  .portfolio-button:hover {
+}
+.portfolio-button:hover {
     background-color: white;
     color: rgb(41, 41, 41);
-  }
-  
+}
+
 
 html{
     scroll-behavior: smooth;
@@ -196,5 +195,25 @@ html{
     .pnglinks li a{
         margin: initial;
         margin-right: 10px;
+    }
+
+    .portfolio-button {
+        position: fixed;
+        top: 45px;
+        right: 5vw;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgb(41, 41, 41);
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 5px;
+        font-size: 20px;
+        border: 2px solid white;
+        font-weight: 300;
+    }
+    .portfolio-button:hover {
+        background-color: white;
+        color: rgb(41, 41, 41);
     }
 }
