@@ -1,22 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>Matt Mejia | Portfolio</title>
         <link rel="stylesheet" href="portfolio_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
-        <section class="banner" id="sec">
+        <header>
+            <a href="index.html" class="logo">MM</a>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+        </header>
 
-            <header>
-                <a href="#" class="logo">MM</a>
-                <a href="index.html" class="home-button">Home</a>
-            </header>
-
-            <div class="content">
-                <h2>Portfolio</h2>
+        <section class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1>My Portfolio</h1>
+                <p>A showcase of my projects and work</p>
             </div>
         </section>
+        
+        <section class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="images/enigma.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Enigma Machine Simulator</h3>
+                            <p>An electronic simulation of the WWII Enigma encryption device, built with Arduino.</p>
+                            <div class="project-tags">
+                                <span>Arduino</span>
+                                <span>Hardware</span>
+                                <span>Encryption</span>
+                            </div>
+                            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="images/projectbg.jpg" alt="Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Smart Home System</h3>
+                            <p>A complete IoT solution for home automation using ESP32 microcontrollers and custom sensors.</p>
+                            <div class="project-tags">
+                                <span>IoT</span>
+                                <span>ESP32</span>
+                                <span>Sensors</span>
+                            </div>
+                            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="images/enigma2.jpg" alt="Project 3">
+                        </div>
+                        <div class="project-info">
+                            <h3>Solar Power Monitoring</h3>
+                            <p>A real-time monitoring system for solar panel performance using embedded systems.</p>
+                            <div class="project-tags">
+                                <span>Renewable Energy</span>
+                                <span>Data Analysis</span>
+                                <span>Embedded</span>
+                            </div>
+                            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">MM</div>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/matthewmejia/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/mejiamj0" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/We1comeMat" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">&copy; 2025 Matt Mejia. All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <script src="script.js"></script>
     </body>
 </html>

@@ -1,35 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-header{
-    position: absolute;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 40px 100px;
+    align-items: center;
+    padding: 30px 100px;
     z-index: 10000;
     transition: 0.6s;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(41, 41, 41, 0.7) 100%);
+    backdrop-filter: blur(5px);
 }
-header .logo{
+
+header.sticky {
+    padding: 15px 100px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.9) 100%);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+header .logo {
     position: relative;
-    font-weight: 100;
+    font-weight: 300;
     color: white;
     text-decoration: none;
-    font-size: 3em;
+    font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
 }
 
-.banner{
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 400;
+    transition: 0.3s;
+    padding: 5px 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Banner Section */
+.banner {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -43,177 +105,263 @@ header .logo{
     z-index: 2;
 }
 
-.content{
-    max-width: 650px;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.content {
+    max-width: 800px;
     padding-left: 10vw;
-    transition: ease all .2s;
+    transition: all 0.5s ease;
+    z-index: 1;
 }
-.content h2{
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content h2 {
     color: white;
-    font-size: 10em;
-    line-height: 150px;
+    font-size: 8em;
+    line-height: 120px;
     text-shadow: 4px 4px 10px black;
-    transition: ease all .2s;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
 }
-.content p{
+
+.content p {
     font-size: 1.7em;
     color: white;
     font-weight: 300;
-    padding-top: 20px;
+    margin-bottom: 40px;
     text-shadow: 2px 2px 6px black;
-    transition: ease all .2s;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
 }
-.content a{
-    position: relative;
+
+.cta-button {
     display: inline-block;
-    margin-top: 20px;
-    background: white;
-    color: black;
-    border-radius: 10px;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 1.2em;
+    background: linear-gradient(135deg, #4a90e2 0%, #2e64b1 100%);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1em;
     font-weight: 500;
-    transition: 0.5s;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.content a:hover{
-    color: white;
-    background: rgb(41, 41, 41);
-    transition: 0.5s;
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #2e64b1 0%, #1a3c6e 100%);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
-.pnglinks{
+
+/* Social Links */
+.social-links {
     position: absolute;
     display: flex;
-    flex-direction: row;
-    bottom: 9vh;
+    bottom: 50px;
     padding-left: 10vw;
-    
+    gap: 20px;
+    z-index: 1;
 }
-.pnglinks li{
+
+.social-links li {
     list-style: none;
-    margin-right: 15px;
-}
-.pnglinks li a{
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: 7.5vh;
-    height: 7.5vh;
-    text-decoration: none;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: 10px 0 0;
-}
-.pnglinks li a:hover{
-    background: white;
-}
-.pnglinks li a img{
-    max-width: 6vh;
-    filter: grayscale();
-
 }
 
-
-.portfolio-button {
-    position: fixed;
-    top: 40px;
-    right: 4vw;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgb(41, 41, 41);
+.social-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    transition: all 0.3s ease;
     color: white;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px;
-    font-size: 22px;
-    border: 2px solid white;
-    font-weight: 300;
-}
-.portfolio-button:hover {
-    background-color: white;
-    color: rgb(41, 41, 41);
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-html{
-    scroll-behavior: smooth;
+.social-links li a:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 1) 100%);
+    color: #4a90e2;
+    border-color: white;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 1000px){
+/* About Section */
+.section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
 
-    header{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 40px 50px;
-        z-index: 10000;
-        transition: 0.6s;
-    }
+.section:nth-child(even) {
+    background-color: #f6f9fc;
+}
 
-    .banner{
-        position: relative;
-        width: 100%;
-        min-height: 100vh;
-        padding: 30px;
-        background: url(images/bg.JPG);
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        display: flex;
-        align-items: center;
-        z-index: 2;
-    }
+.section-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    background: linear-gradient(to right, #333, #4a90e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
 
-    .content{
-        max-width: 550px;
-        padding-left: 0px;
-    }
-    .content h2{
-        color: white;
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #333, #4a90e2);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-content, .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text p, .contact-content p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #222 0%, #333 50%, #222 100%);
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .content h2 {
         font-size: 6em;
         line-height: 90px;
-        text-shadow: 4px 4px 10px black;
     }
-    .content p{
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 20px 50px;
+    }
+    
+    header.sticky {
+        padding: 10px 50px;
+    }
+    
+    .content h2 {
+        font-size: 5em;
+        line-height: 80px;
+    }
+    
+    .content p {
+        font-size: 1.4em;
+    }
+    
+    .section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
+    
+    nav {
+        gap: 15px;
+    }
+    
+    .content {
+        padding-left: 0;
+    }
+    
+    .content h2 {
+        font-size: 4em;
+        line-height: 70px;
+    }
+    
+    .content p {
+        font-size: 1.2em;
+    }
+    
+    .social-links {
+        padding-left: 0;
+    }
+    
+    .banner {
+        padding: 100px 30px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    header .logo {
+        font-size: 1.5em;
+    }
+    
+    .nav-link {
+        font-size: 0.9em;
+    }
+    
+    .content h2 {
+        font-size: 3em;
+        line-height: 55px;
+    }
+    
+    .content p {
         font-size: 1em;
-        color: white;
-        font-weight: 300;
-        padding-top: 20px;
-        text-shadow: 2px 2px 6px black;
     }
-
-    .pnglinks{
-        position: absolute;
-        bottom: 50px;
-        right: initial;
-        flex-direction: row;
-        padding-left: 0.5vw;
+    
+    .section-title {
+        font-size: 2em;
     }
-    .pnglinks li a{
-        margin: initial;
-        margin-right: 10px;
-    }
-
-    .portfolio-button {
-        position: fixed;
-        top: 45px;
-        right: 5vw;
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: rgb(41, 41, 41);
-        color: white;
-        text-decoration: none;
-        transition: background-color 0.3s, color 0.3s;
-        border-radius: 5px;
-        font-size: 20px;
-        border: 2px solid white;
-        font-weight: 300;
-    }
-    .portfolio-button:hover {
-        background-color: white;
-        color: rgb(41, 41, 41);
+    
+    .social-links li a {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
     }
 }

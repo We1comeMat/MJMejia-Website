@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>Matt Mejia | Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
         <section class="banner" id="sec">
-
+            <div class="overlay"></div>
             <header>
                 <a href="#" class="logo">MM</a>
-                <a href="portfolio.html" class="portfolio-button">Portfolio</a>
+                <nav>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
             </header>
 
-            <div class="content">
+            <div class="content fade-in">
                 <h2>MATT<br>MEJIA</h2>
-                <p>ELECTRICAL ENGINEERING STUDENT</p>
+                <p>ELECTRICAL ENGINEER</p>
+                <a href="portfolio.html" class="cta-button">View My Work</a>
             </div>
 
-            <ul class="pnglinks">
-                <li><a href="https://www.linkedin.com/in/matthewmejia/" target="_blank"><img src="images/linkedin.png"></a></li>
-                <li><a href="https://twitter.com/mejiamj0" target="_blank"><img src="images/twitter.png"></a></li>
-                <li><a href="https://github.com/We1comeMat" target="_blank"><img src="images/github (1).png"></a></li>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/matthewmejia/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/mejiamj0" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://github.com/We1comeMat" target="_blank"><i class="fab fa-github"></i></a></li>
             </ul>
         </section>
+        
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hello! I'm Matt Mejia, an Electrical Engineer with a passion for technology and innovation. I specialize in creating solutions that combine hardware and software to solve real-world problems.</p>
+                        <p>With a degree in Electrical Engineering and extensive experience in the field, I bring a unique blend of technical expertise and creative problem-solving to every project. I'm constantly exploring new ideas and approaches to engineering challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <p>Feel free to reach out to me through social media or email. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <a href="mailto:contact@matthewmejia.com" class="cta-button">Email Me</a>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Matt Mejia. All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <script src="script.js"></script>
     </body>
 </html>
