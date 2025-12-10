@@ -215,6 +215,18 @@ a {
     margin-bottom: 40px;
 }
 
+.about-content h3 {
+    font-size: 1.5em;
+    color: #4a90e2;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.about-content h3:first-child {
+    margin-top: 0;
+}
+
 .about-content p {
     font-size: 1.15em;
     line-height: 1.8;
