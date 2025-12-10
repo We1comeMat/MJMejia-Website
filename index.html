@@ -8,58 +8,136 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
-        <section class="banner" id="sec">
-            <div class="overlay"></div>
-            <header>
-                <a href="#" class="logo">MM</a>
-                <nav>
-                    <a href="portfolio.html" class="nav-link">Portfolio</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </nav>
-            </header>
-
-            <div class="content fade-in">
-                <h2>MATT<br>MEJIA</h2>
-                <p>ELECTRICAL ENGINEER</p>
-                <a href="portfolio.html" class="cta-button">View My Work</a>
+        <div class="split-container">
+            <div class="split-section left-section">
+                <div class="split-content">
+                    <h2>About Me</h2>
+                    <p>Personal site & bio</p>
+                    <a href="#about" class="split-button">Learn More</a>
+                </div>
             </div>
 
-            <ul class="social-links">
-                <li><a href="https://www.linkedin.com/in/matthewmejia/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://twitter.com/mejiamj0" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://github.com/We1comeMat" target="_blank"><i class="fab fa-github"></i></a></li>
-            </ul>
-        </section>
-        
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
+            <div class="split-divider">
+                <div class="logo-circle">MM</div>
+            </div>
+
+            <div class="split-section right-section">
+                <svg class="pcb-background-right" viewBox="0 0 960 1080" preserveAspectRatio="xMidYMid slice">
+                    <!-- Gradient definitions for fading traces -->
+                    <defs>
+                        <linearGradient id="fadeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:0" />
+                            <stop offset="30%" style="stop-color:#00d9ff;stop-opacity:0.4" />
+                            <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:0.4" />
+                        </linearGradient>
+                        <linearGradient id="fadeGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:0" />
+                            <stop offset="30%" style="stop-color:#00d9ff;stop-opacity:0.4" />
+                            <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:0.4" />
+                        </linearGradient>
+                        <linearGradient id="fadeGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:0" />
+                            <stop offset="30%" style="stop-color:#00d9ff;stop-opacity:0.4" />
+                            <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:0.4" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- PCB trace patterns - 45 degree angles only -->
+                    <g class="background-traces">
+                        <!-- Top left to center diagonals (fading in) -->
+                        <path class="pcb-trace fade-trace" d="M 0 0 L 350 350" stroke="url(#fadeGrad1)"/>
+                        <path class="pcb-trace fade-trace" d="M 0 200 L 250 450" stroke="url(#fadeGrad1)"/>
+
+                        <!-- Top right to center diagonals (fading in) -->
+                        <path class="pcb-trace fade-trace" d="M 960 0 L 610 350" stroke="url(#fadeGrad2)"/>
+                        <path class="pcb-trace fade-trace" d="M 960 180 L 710 430" stroke="url(#fadeGrad2)"/>
+
+                        <!-- Bottom left diagonals (fading in) -->
+                        <path class="pcb-trace fade-trace" d="M 0 880 L 200 680" stroke="url(#fadeGrad3)"/>
+                        <path class="pcb-trace fade-trace" d="M 0 1080 L 300 780" stroke="url(#fadeGrad1)"/>
+
+                        <!-- Bottom right diagonals (fading in) -->
+                        <path class="pcb-trace fade-trace" d="M 960 880 L 760 680" stroke="url(#fadeGrad2)"/>
+                        <path class="pcb-trace fade-trace" d="M 960 1080 L 660 780" stroke="url(#fadeGrad2)"/>
+                    </g>
+
+                    <!-- LED 1 (top left corner) -->
+                    <g class="pcb-component led" transform="translate(250, 320)">
+                        <rect class="led-body" x="-25" y="-18" width="50" height="36" rx="3"/>
+                        <rect class="led-tab" x="-30" y="-8" width="8" height="16"/>
+                        <rect class="led-tab" x="22" y="-8" width="8" height="16"/>
+                        <circle class="led-light led-light-red" cx="0" cy="0" r="12"/>
+                        <text class="pcb-label" x="-8" y="32" font-size="10">D1</text>
+                    </g>
+
+                    <!-- Toggle Switch (top right corner) -->
+                    <g class="pcb-component switch" transform="translate(710, 320)">
+                        <rect class="switch-body" x="-40" y="-20" width="80" height="40" rx="4"/>
+                        <rect class="switch-slot" x="-28" y="-6" width="56" height="12" rx="6" fill="#1a1a1a"/>
+                        <g class="switch-handle">
+                            <rect x="-12" y="-10" width="24" height="20" rx="10" fill="#e8e8e8"/>
+                        </g>
+                        <text class="pcb-label" x="-10" y="40" font-size="10">S1</text>
+                    </g>
+
+                    <!-- Lightbulb (bottom left corner) -->
+                    <g class="pcb-component lightbulb" transform="translate(250, 760)">
+                        <circle class="bulb-glass" cx="0" cy="0" r="35" fill="rgba(255, 255, 100, 0.3)" stroke="#888" stroke-width="2"/>
+                        <path class="bulb-filament" d="M -10 -5 Q 0 -15 10 -5" stroke="#ff6600" stroke-width="3" fill="none"/>
+                        <circle class="bulb-glow" cx="0" cy="0" r="35"/>
+                        <path class="bulb-base" d="M -20 32 L -15 42 L 15 42 L 20 32 Z" fill="#c0c0c0"/>
+                        <text class="pcb-label" x="-8" y="60" font-size="10">L1</text>
+                    </g>
+
+                    <!-- LED 2 (bottom right corner) -->
+                    <g class="pcb-component led" transform="translate(710, 760)">
+                        <rect class="led-body" x="-25" y="-18" width="50" height="36" rx="3"/>
+                        <rect class="led-tab" x="-30" y="-8" width="8" height="16"/>
+                        <rect class="led-tab" x="22" y="-8" width="8" height="16"/>
+                        <circle class="led-light led-light-green" cx="0" cy="0" r="12"/>
+                        <text class="pcb-label" x="-8" y="32" font-size="10">D2</text>
+                    </g>
+                </svg>
+                <div class="split-content">
+                    <h2>Portfolio</h2>
+                    <p>Professional work & projects</p>
+                    <a href="https://www.linklayerlabs.com" target="_blank" class="split-button">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+
+        <section id="about" class="about-page">
+            <div class="about-container">
+                <a href="#" class="back-home">← Back to Home</a>
+
+                <div class="about-header">
+                    <h1>Matt Mejia</h1>
+                    <p class="subtitle">Electrical Engineer</p>
+                </div>
+
                 <div class="about-content">
-                    <div class="about-text">
-                        <p>Hello! I'm Matt Mejia, an Electrical Engineer with a passion for technology and innovation. I specialize in creating solutions that combine hardware and software to solve real-world problems.</p>
-                        <p>With a degree in Electrical Engineering and extensive experience in the field, I bring a unique blend of technical expertise and creative problem-solving to every project. I'm constantly exploring new ideas and approaches to engineering challenges.</p>
+                    <p>Hello! I'm Matt Mejia, an Electrical Engineer with a passion for technology and innovation. I specialize in creating solutions that combine hardware and software to solve real-world problems.</p>
+                    <p>With a degree in Electrical Engineering and extensive experience in the field, I bring a unique blend of technical expertise and creative problem-solving to every project. I'm constantly exploring new ideas and approaches to engineering challenges.</p>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Feel free to reach out through social media or email.</p>
+                    <a href="mailto:contact@matthewmejia.com" class="email-button">Email Me</a>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/matthewmejia/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/mejiamj0" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/We1comeMat" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
+
+                <footer class="about-footer">
+                    <p>&copy; 2025 Matt Mejia. All rights reserved.</p>
+                </footer>
             </div>
         </section>
-        
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <p>Feel free to reach out to me through social media or email. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                    <a href="mailto:contact@matthewmejia.com" class="cta-button">Email Me</a>
-                </div>
-            </div>
-        </section>
-        
-        <footer>
-            <div class="container">
-                <p>&copy; 2025 Matt Mejia. All rights reserved.</p>
-            </div>
-        </footer>
-        
+
         <script src="script.js"></script>
     </body>
 </html>

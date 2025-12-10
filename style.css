@@ -15,6 +15,7 @@ body {
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
@@ -25,6 +26,439 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Split Hero Layout */
+.split-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.split-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.split-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 5;
+}
+
+.right-section::after {
+    display: none;
+}
+
+.left-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.left-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(images/bg.JPG);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.right-section {
+    background: linear-gradient(135deg, #0a2540 0%, #16213e 100%);
+}
+
+.split-section:hover {
+    flex: 1.1;
+}
+
+.split-content {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    padding: 40px;
+}
+
+.split-content h2 {
+    color: white;
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.split-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.split-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.split-button:hover {
+    background: white;
+    color: #16213e;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.split-divider {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+    transition: left 0.5s ease;
+}
+
+.logo-circle {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #4a90e2 0%, #2e64b1 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 4px solid white;
+}
+
+/* About Page */
+.about-page {
+    display: none;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6f9fc 0%, #ffffff 100%);
+    padding: 80px 20px;
+}
+
+.about-page:target {
+    display: block;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.back-home {
+    display: inline-block;
+    color: #4a90e2;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.back-home:hover {
+    color: #2e64b1;
+    transform: translateX(-5px);
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-header h1 {
+    font-size: 4em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.about-header .subtitle {
+    font-size: 1.5em;
+    color: #666;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.about-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.about-content p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-info h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.email-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4a90e2 0%, #2e64b1 100%);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+    margin-bottom: 30px;
+}
+
+.email-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+}
+
+.contact-info .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-info .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #4a90e2 0%, #2e64b1 100%);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info .social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.4);
+}
+
+.about-footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* PCB Background for Right Section */
+.pcb-background-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* PCB Traces */
+.background-traces {
+    opacity: 1;
+}
+
+.pcb-trace {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: miter;
+    filter: drop-shadow(0 0 2px rgba(0, 217, 255, 0.3));
+}
+
+.fade-trace {
+    animation: traceFadeInOut 5s ease-in-out infinite;
+}
+
+.fade-trace:nth-child(1) { animation-delay: 0s; }
+.fade-trace:nth-child(2) { animation-delay: 0.6s; }
+.fade-trace:nth-child(3) { animation-delay: 1.2s; }
+.fade-trace:nth-child(4) { animation-delay: 1.8s; }
+.fade-trace:nth-child(5) { animation-delay: 2.4s; }
+.fade-trace:nth-child(6) { animation-delay: 3.0s; }
+.fade-trace:nth-child(7) { animation-delay: 3.6s; }
+.fade-trace:nth-child(8) { animation-delay: 4.2s; }
+
+@keyframes traceFadeInOut {
+    0%, 100% {
+        opacity: 0.2;
+        filter: drop-shadow(0 0 1px rgba(0, 217, 255, 0.2));
+    }
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 6px rgba(0, 217, 255, 0.8));
+    }
+}
+
+/* PCB Components */
+.pcb-component {
+    opacity: 1;
+}
+
+.pcb-label {
+    fill: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.8));
+}
+
+/* LED Styles */
+.led-body {
+    fill: #2a2a2a;
+    stroke: none;
+}
+
+.led-tab {
+    fill: #c0c0c0;
+    stroke: none;
+}
+
+.led-light {
+    opacity: 0.8;
+    animation: ledBlink 2.5s ease-in-out infinite;
+}
+
+.led-light-red {
+    fill: #ff3333;
+    animation-delay: 0s;
+}
+
+.led-light-green {
+    fill: #33ff66;
+    animation-delay: 1.2s;
+}
+
+@keyframes ledBlink {
+    0%, 100% {
+        opacity: 0.2;
+        filter: drop-shadow(0 0 2px currentColor);
+    }
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 15px currentColor);
+    }
+}
+
+/* Lightbulb Styles */
+.bulb-base {
+    fill: #c0c0c0;
+}
+
+.bulb-glass {
+    fill: rgba(255, 255, 100, 0.2);
+    stroke: #888;
+    stroke-width: 2;
+}
+
+.bulb-filament {
+    stroke: #ff9900;
+    stroke-width: 3;
+    fill: none;
+    animation: filamentGlow 3s ease-in-out infinite;
+}
+
+.bulb-glow {
+    fill: rgba(255, 220, 100, 0.3);
+    filter: blur(8px);
+    animation: bulbPulse 3s ease-in-out infinite;
+}
+
+@keyframes filamentGlow {
+    0%, 100% {
+        stroke: #ff6600;
+        filter: drop-shadow(0 0 3px #ff6600);
+    }
+    50% {
+        stroke: #ffcc00;
+        filter: drop-shadow(0 0 12px #ffcc00);
+    }
+}
+
+@keyframes bulbPulse {
+    0%, 100% {
+        fill: rgba(255, 220, 100, 0.2);
+        r: 30px;
+    }
+    50% {
+        fill: rgba(255, 220, 100, 0.6);
+        r: 38px;
+    }
+}
+
+/* Toggle Switch Styles */
+.switch-body {
+    fill: #444;
+    stroke: none;
+}
+
+.switch-slot {
+    stroke: none;
+}
+
+.switch-handle {
+    animation: switchToggle 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes switchToggle {
+    0% { transform: translateX(-16px); }
+    45% { transform: translateX(-16px); }
+    50% { transform: translateX(16px); }
+    95% { transform: translateX(16px); }
+    100% { transform: translateX(-16px); }
 }
 
 /* Header and Navigation */
@@ -341,27 +775,94 @@ footer p {
     header .logo {
         font-size: 1.5em;
     }
-    
+
     .nav-link {
         font-size: 0.9em;
     }
-    
+
     .content h2 {
         font-size: 3em;
         line-height: 55px;
     }
-    
+
     .content p {
         font-size: 1em;
     }
-    
+
     .section-title {
         font-size: 2em;
     }
-    
+
     .social-links li a {
         width: 40px;
         height: 40px;
+        font-size: 1em;
+    }
+}
+
+/* Responsive Split Hero */
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+
+    .split-section:hover {
+        flex: 1.05;
+    }
+
+    .split-content h2 {
+        font-size: 2.5em;
+    }
+
+    .split-content p {
+        font-size: 1em;
+    }
+
+    .logo-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5em;
+    }
+
+    .about-header h1 {
+        font-size: 3em;
+    }
+
+    .about-header .subtitle {
+        font-size: 1.2em;
+    }
+
+    .about-content, .contact-info {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .split-content h2 {
+        font-size: 2em;
+    }
+
+    .split-content p {
+        font-size: 0.9em;
+    }
+
+    .split-button {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    .logo-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2em;
+        border: 3px solid white;
+    }
+
+    .about-header h1 {
+        font-size: 2.5em;
+    }
+
+    .about-header .subtitle {
         font-size: 1em;
     }
 }
